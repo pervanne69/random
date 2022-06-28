@@ -827,11 +827,11 @@ section.analytic .analytic__body > div {
 }
 section.analytic .analytic__body .analytic__customers {
   background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
-  padding: 66px 90px 66px 0;
+  padding: 66px 90px 66px 10px;
 }
 @media (max-width: 500px) {
   section.analytic .analytic__body .analytic__customers {
-    padding-right: 50px;
+    padding-right: 30px;
   }
 }
 section.analytic .analytic__body .analytic__customers .customers__image {
@@ -859,11 +859,21 @@ section.analytic .analytic__body .analytic__customers .customers__percentage {
   line-height: 83px;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 section.analytic .analytic__body .analytic__customers .customers__text {
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 section.analytic .analytic__body .analytic__users {
   background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
@@ -871,7 +881,7 @@ section.analytic .analytic__body .analytic__users {
 }
 @media (max-width: 500px) {
   section.analytic .analytic__body .analytic__users {
-    padding-left: 50px;
+    padding-left: 30px;
   }
 }
 section.analytic .analytic__body .analytic__users .users__image {
@@ -891,11 +901,21 @@ section.analytic .analytic__body .analytic__users .users__amount {
   font-weight: 400;
   font-size: 48px;
   line-height: 83px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 section.analytic .analytic__body .analytic__users .users__text {
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 footer.footer {
