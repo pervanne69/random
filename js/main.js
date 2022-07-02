@@ -1,4 +1,3 @@
-
 const body = document.body
 const resourcesPlaning = body.querySelector('.resources__planing')
 
@@ -9,6 +8,7 @@ body.querySelectorAll('.questions__question').forEach(el => {
         el.classList.toggle('passive')
     })
 })
+
 
 resourcesPlaning.addEventListener('click', e => {
     if (e.target === e.currentTarget) {
@@ -58,4 +58,33 @@ resourcesPlaning.addEventListener('click', e => {
             }
         }
     }
+})
+
+
+body.querySelectorAll('.resources__cycle').forEach((el) => {
+    el.addEventListener('click', () => {
+        if (!el.classList.contains('resources__cycle-active')) {
+            const cycleActive = body.querySelector('.resources__cycle-active')
+
+            console.log(cycleActive)
+
+            cycleActive.classList.toggle('resources__cycle-active')
+            cycleActive.classList.toggle('resources__cycle-passive')
+
+            el.classList.toggle('resources__cycle-active')
+            el.classList.toggle('resources__cycle-passive')
+
+            const planingCardActive = body.querySelector('.planing__card-active')
+
+            planingCardActive.classList.toggle('planing__card-active')
+            planingCardActive.classList.toggle('planing__card-passive')
+
+            const cycleId = el.id.slice(-1)
+
+            const nextPlaningCardActive = body.querySelector(`#planing__card-${cycleId}`)
+
+            nextPlaningCardActive.classList.toggle('planing__card-active')
+            nextPlaningCardActive.classList.toggle('planing__card-passive')
+        }
+    })
 })
